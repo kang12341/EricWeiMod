@@ -1,2 +1,2 @@
 # mymindustry.mod
-我的mindustrymod库
+mindustrymod is 埃里克卫星
