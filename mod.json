@@ -1,0 +1,12 @@
+{
+   	"name": "埃里克卫星",
+	"displayName": "埃里克卫星",
+	"author": "anren",
+	"description": "Allow to land the sector of erekir---允许着落埃里克尔的卫星",
+	"version": "1.0",
+	"hidden": true,
+	"minGameVersion": 136
+	"repo":"kang12341/mymindustry.mod ",
+	"hideInBrowser": false,
+}
+
