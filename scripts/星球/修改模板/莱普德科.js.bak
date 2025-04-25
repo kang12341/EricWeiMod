@@ -1,0 +1,54 @@
+//定义新星球
+const lib = require("SFlib");
+const 莱普德科 = new JavaAdapter(Planet, {
+    load() {
+        this.meshLoader = prov(() => new HexMesh(莱普德科, 4));
+        this.super$load();
+    }
+}, "莱普德科", Planets.sun, 1);//星球围绕太阳运行，轨道位置
+
+//以下设置星球属性
+
+const sS = require("sectorSize");
+sS.planetGrid(莱普德科, 3.3);//设置星球网格大小
+莱普德科.generator = new SerpuloPlanetGenerator();//使用se……做为地形生成器
+莱普德科.visible = true;//星球是否可见
+莱普德科.bloom = false;//是否泛光
+莱普德科.accessible = true;//可否访问
+莱普德科.tidalLock = true//是否潮汐锁定（永远面向父星球
+莱普德科.prebuildBase = false;//开局是否预建基地
+莱普德科.atmosphereColor = Color.valueOf("5F86ADFF");//大气层颜色
+莱普德科.alwaysUnlocked = true;//是否默认解锁
+莱普德科.atmosphereRadIn = 0.02;//大气层内外半径
+莱普德科.atmosphereRadOut = 0.1;//同上
+莱普德科.localizedName = "莱普德科";//本地化名称，游戏界面显示
+莱普德科.orbitRadius = 85;//轨道半径
+莱普德科.startSector = 1;//起始扇区区块
+
+const 残兵败将 = new SectorPreset("残兵败将", 莱普德科, 1);//定义战役地图
+残兵败将.description = "我们失败了，逃里这个区域";
+残兵败将.alwaysUnlocked = false;//是否默认解锁
+残兵败将.difficulty = 12;//地图难度
+残兵败将.captureWave = 85;//占领波次，0是无需
+残兵败将.localizedName = "残兵败将";//本地化名称
+exports.残兵败将 = 残兵败将;
+
+lib.addToResearch(残兵败将, {
+    parent: '惶恐滩',
+    objectives: Seq.with(
+        new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+});
+//- **`addToResearch`**：
+ // - 将地图添加到技术树中，设置其父节点为 `惶恐滩`，并添加研究目标（完成 `planetaryTerminal` 扇区）。
+const 狭长冰谷 = new SectorPreset("狭长冰谷", 莱普德科, 18);
+狭长冰谷.alwaysUnlocked = false;
+狭长冰谷.difficulty = 12;
+狭长冰谷.captureWave = 65;
+狭长冰谷.localizedName = "狭长冰谷";
+exports.狭长冰谷 = 狭长冰谷;
+
+lib.addToResearch(狭长冰谷, {
+    parent: '残兵败将',
+    objectives: Seq.with(
+        new Objectives.SectorComplete(SectorPresets.planetaryTerminal))
+});

@@ -1,0 +1,42 @@
+{
+     "name":"埃里克卫核心"//名字
+	"description":"本mod只添加了类似埃里克尔的战役区块。",//介绍
+	"itemCapacity":5000,
+	//容量
+	"armor":3,
+	"alwaysUnlocked":true,
+	//开局解锁
+	"hasItems": true,
+	//是否可以存有物品
+	"health":3000,
+	//生命
+	"unitCapModifier":10,
+	//最大单位数量
+"unitType": "evoke",
+	//出生机甲
+	"size":4,
+//"research": "core-nucleus"
+	//占地边长支持1~9对应贴图1x1=32x32像素.
+"research": {
+		"root":false,//是否为根科技树
+	"planet":"埃里克卫"//科技树研究消耗物品所属星球
+   "name": "埃里克卫"//科技树名称
+		},
+	"requirements": [
+	    "graphite/1000",
+		"beryllium/1000",
+		"silicon/1000"
+	    ],
+	    //建造消耗。
+	"category": "effect",
+	//菜单栏类别
+	//"research": "core-nucleus"
+	//科技树
+}
+
+
+
+
+
+
+

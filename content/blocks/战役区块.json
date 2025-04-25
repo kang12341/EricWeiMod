@@ -1,0 +1,15 @@
+{
+    "type": "Wall",
+    "name": "埃里克卫星-战役区块",
+    "description": "日志：目前埃里克卫战役区块11个。",
+    "health": 0,
+    "buildVisibility": "hidden",
+    "alwaysUnlocked": true,
+    "size": 1,
+	"research": {
+	      "parent":"着陆地区",
+	      "deptrh": 9,
+"nodeDistance": 100, 
+                      
+              },
+}
