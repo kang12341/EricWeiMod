@@ -5,7 +5,7 @@
 	"description": "Allow to land the sector of erekir---允许着落埃里克尔的卫星",
 	"version": "1.0",
 	"hidden": true,
-	"minGameVersion": 136
+	"minGameVersion": 136,
 	"repo":"kang12341/EricWeiMod",
 	"hideInBrowser": false,
 }
